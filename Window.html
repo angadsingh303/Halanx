@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+</head>
+
+<body>
+    <div><button onclick="open_win()">Detect Current Location</button></div>
+    <script>
+        function open_win() {
+            windowObject = window.open('', '', 'width=900,height=400');
+            windowObject.focus();
+            windowObject.window.location = "GeoLocation.html";
+
+        }
+    </script>
+</body>
+</html>
