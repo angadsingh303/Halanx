@@ -6,12 +6,20 @@
 </head>
 
 <body>
-    <div><button onclick="open_win()">Detect Current Location</button></div>
+    <div><button onclick="open_win1()">Automatically Detect Current Location</button></div>
+    <div><button onclick="open_win2()">Enter your Area Manually</button></div>
     <script>
-        function open_win() {
+        function open_win1() {
             windowObject = window.open('', '', 'width=900,height=400');
             windowObject.focus();
             windowObject.window.location = "GeoLocation.html";
+
+        }
+
+        function open_win2() {
+            windowObject = window.open('', '', 'width=900,height=400');
+            windowObject.focus();
+            windowObject.window.location = "GeoLocation-1.html";
 
         }
     </script>
