@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Halanx-'Everyone's Personal Shopper'</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="parallax.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXnunhscL2jKBg62KkqAhJwSMXhDoN9DE&libraries=places"></script>
+    <script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', function() {
+            var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+            google.maps.event.addListener(places, 'place_changed', function() {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.A;
+                var longitude = place.geometry.location.F;
+                /*  var mesg = "Address: " + address;
+                  mesg += "\nLatitude: " + latitude;
+                  mesg += "\nLongitude: " + longitude;
+                  alert(mesg);*/
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- add header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.php"><img src="logo.png" class="img-responsive img-circle" width="50" height="50"> </a>
+                <a class="navbar-brand navbar-bg" href="index.php">Halanx</a>
+            </div>
+            <!-- menu items -->
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav navbar-right">
+                    <button class="btn btn-danger btn-md pull-right" onclick="window.location='login1.php'"> Login </button>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg1" data-parallax="scroll" data-image-src="background1.png">
+        <div class="row row_1">
+            <div class="col-sm-12">
+                Everyone's Personal Shopper
+            </div>
+        </div>
+        <div class="row row_2">
+            <div class="col-sm-12">
+                <i>Get your groceries delivered at your doorstep in as little as one hour!</i>
+            </div>
+        </div>
+
+        <div class="row row_3">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-offset-3">
+                        <span id="pac-container">
+
+                        <input type="text" id="txtPlaces" class="form-control input-md" placeholder="Enter your location" />
+
+                    </span>
+                        <span class="input-group-btn">
+                          
+                        <button class="btn btn-danger btn-md" type="button" id="search">
+                            <i class="glyphicon glyphicon-search" onclick="window.location='dashboard.php'"></i>
+                        </button>
+                    </span>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row_4">
+        Detect current location <span class="glyphicon glyphicon-screenshot"></span>
+    </div>
+
+
+    <div class="container-fluid bg2">
+        <div class="col-md-5">
+            <div class="row row_6">
+                <center>Areas we serve</center>
+            </div>
+
+            <div class="row row_7">
+                <div class="col-md-4">Delhi</div>
+                <div class="col-md-4">Gurgaon</div>
+                <div class="col-md-4">Noida</div>
+            </div>
+        </div>
+
+        <div class="col-md-1">
+            <h1></h1>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row row_6">
+                <center>Make Money with Us</center>
+            </div>
+
+            <div class="row row_7">
+                <div class="col-md-6">Become a Shopper</div>
+                <div class="col-md-6">Get your store listed</div>
+            </div>
+        </div>
+
+
+        <div class="row row_8">
+            <div class="col-md-6 col-md-offset-3">
+                <center>Download App</center>
+            </div>
+        </div>
+
+        <div class="row row_9">
+            <div class="col-md-6 col1">
+                <center>Android App on Playstore</center>
+            </div>
+
+            <div class="col-md-6 col1">
+                <center>iOS App on iTunes</center>
+            </div>
+        </div>
+
+        <div class="row row_10">
+            <div class="col-md-6">
+                <center><img src="googleplaystore.png" class="img-responsive img1" height="90" width="100"></center>
+            </div>
+
+            <div class="col-md-6">
+                <center><img src="apple1.jpg" class="img-responsive img" height="120" width="100"></center>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="container-fluid bg3">
+    <div class="row row_11">
+        <div class="col-md-2"><a href="aboutus1.php">About Us</a></div>
+        <div class="col-md-2"><a href="#">Careers</a></div>
+        <div class="col-md-2"><a href="#">Blog</a></div>
+        <div class="col-md-2"><a href="#">Press</a></div>
+        <div class="col-md-2"><a href="#">Contact Us</a></div>
+        <div class="col-md-2"><a href="#">Terms</a></div>
+    </div>-->
+
+    <div class="row row_13">
+        <ul class="about">
+            <li><a href="aboutus1.php">ABOUT US</a></li>
+            <li><a href="#">CAREERS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">TERMS</a></li>
+        </ul>
+        <span id="join">Join us on </span>
+        <div class="contact">
+
+            <a href="https://www.facebook.com"> <i id="social-fb" class="fa fa-facebook-square fa-3x social" aria-hidden="true" title="Facebook"></i></a>
+            <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social" aria-hidden="true" title="Twitter"></i></a>
+            <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social" aria-hidden="true" title="Google +"></i></a>
+            <a href="mailto:mr.sidhantkumar1@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"  aria-hidden="true" title="Mail"></i></a>
+        </div>
+
+    </div>
+
+    <div class="row row_12">
+        <span class="glyphicon glyphicon-copyright-mark"> Halanx 2017 </span>
+    </div>
+
+
+
+</body>
+
+</html>
